@@ -1,9 +1,58 @@
-# Analysis of Supply Chain Data with Python and visualisations with Power BI and Tableau.
+# 📊 Supply Chain Data Analysis Pipeline Project (Kaggle, Python, OpenAI and Power BI)
 
-The data was extracted from Kaggle: https://www.kaggle.com/datasets/harshsingh2209/supply-chain-analysis
-using the Kaggle library in Python to download and unzip the dataset with the Kaggle API
-and the OpenAI library to read the downloaded dataset in CSV format, and analyse its content using a prompt that describes the content, and create the 'metadata' that it was originally missing from the dataset in Kaggle.
+This project demonstrates a complete data analysis workflow, integrating multiple tools and technologies to extract, process, enrich, and visualize data for business insights.
+**Kaggle Dataset:** https://www.kaggle.com/datasets/harshsingh2209/supply-chain-analysis
 
+<p align="center">
+<img width="900" height="370" alt="e70652d6-42ac-4f60-a24d-b648711cf502" src="https://github.com/user-attachments/assets/918555bc-9f97-45b5-913b-c364f5121815" />
+
+
+---
+
+## 🔧 Project Workflow Overview
+
+1. **Data Extraction from Kaggle**
+   - Utilizes the Kaggle API to programmatically download datasets.
+   - Ensures reproducibility and automation in data acquisition.
+
+2. **Data Processing with Pandas**
+   - Reads and explores the dataset using Python and Pandas.
+   - Performs data cleaning, handling missing values, and formatting.
+
+3. **Metadata Enrichment via OpenAI API**
+   - Connects to the OpenAI API to analyze and interpret missing or unclear metadata.
+   - Adds contextual understanding and improves data quality.
+
+4. **Export to Excel Format**
+   - Cleansed and enriched data is exported to `.xlsx` format.
+   - Prepares the dataset for seamless integration with Power BI.
+
+5. **Power BI Integration**
+   - Imports the Excel file into Power BI.
+   - Normalizes the data model, adjusts data types, and resolves inconsistencies.
+
+6. **KPI Development and Dashboard Visualization**
+   - Creates calculated measures and KPIs to track performance.
+   - Designs an interactive dashboard to visualize insights and trends.
+
+---
+
+## 🎯 Key Skills Demonstrated
+
+- API integration (Kaggle & OpenAI)
+- Data wrangling and cleaning with Pandas
+- Data enrichment using AI
+- Excel export for BI tools
+- Power BI modeling and visualization
+- KPI creation and storytelling with data
+  
+**Dashboard Preview**
+<p align="center">
+<img width="707" height="396" alt="dashboard_preview" src="https://github.com/user-attachments/assets/7fb61ec7-3f9a-49c2-a66b-c93e3233d166" />
+
+---
+
+**Data Insights**<br>
 **1. High-level Description:**
 This dataset captures detailed information about a variety of beauty and personal care products (haircare, skincare, cosmetics), spanning sales, logistics, manufacturing, quality inspection, and transportation. Each row represents a unique product (SKU), with data on its sales performance, supply chain metrics, customer demographics, QA outcomes, and related costs.
 
@@ -27,16 +76,14 @@ This dataset captures detailed information about a variety of beauty and persona
 - **Production volumes/costs**: Manufacturing batch size and costs.
 - **Inspection results/defect rates**: Quality check outcome and observed defect rate.
 - **Transportation modes/routes/costs**: How products are shipped, via which path, with shipping cost.
-- (There are a few redundant columns, e.g., "Lead times" and "Lead time," both present.)
 
 ---
 
 **3. Data Quality Issues:**
 
-- **Missing values**: Sample does not show explicit blanks, but checks on full dataset needed to confirm completeness (e.g., any 'Unknown' or blank entries).
-- **Duplicates**: Based on sample, each SKU appears once, but full dataset should be checked for duplicate SKUs.
+- **Missing values**: Dataset does not show any 'Unknown' or blank entries.
+- **Duplicates**: each SKU appears once, no duplicated SKUs found.
 - **Outliers/Inconsistencies**:
-    - Some entries (e.g., "Defect rates" of 0.02 vs. 4.85) suggest wide variability; need to assess if these are realistic.
     - "Revenue generated" and "Number of products sold" do not always seem consistent with "Price" (likely due to discounts or data entry errors).
     - "Customer demographics" includes 'Unknown'; this may need addressing for demographic analyses.
     - "Lead times" vs. separate "Lead time" columns could imply duplication or ambiguity.
