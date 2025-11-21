@@ -48,7 +48,8 @@ This project demonstrates a complete data analysis workflow, integrating multipl
   
 **Dashboard Preview**
 <p align="center">
-<img width="707" height="396" alt="dashboard_preview" src="https://github.com/user-attachments/assets/7fb61ec7-3f9a-49c2-a66b-c93e3233d166" />
+   
+![power_bi_db_supply_chain-ezgif com-video-to-gif-converter](https://github.com/user-attachments/assets/b5d7a61c-ee74-4f49-a8e9-e25a36daca60)
 
 ---
 
